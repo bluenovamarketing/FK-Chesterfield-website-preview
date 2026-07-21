@@ -96,6 +96,6 @@
     menuButton.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');document.body.classList.toggle('menu-open',open);menuButton.setAttribute('aria-expanded',open);menuButton.textContent=open?'×':'☰'});
     navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');document.body.classList.remove('menu-open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰'}));
   </script>
-  <script>const siteHeader=document.querySelector('.site-header');const updateHeader=()=>siteHeader.classList.toggle('is-scrolled',window.scrollY>24);updateHeader();window.addEventListener('scroll',updateHeader,{passive:true});</script>
+  <script>document.querySelector('.form-panel iframe')?.removeAttribute('loading');const siteHeader=document.querySelector('.site-header');const updateHeader=()=>{if(window.scrollY>180)siteHeader.classList.add('is-scrolled');else if(window.scrollY<40)siteHeader.classList.remove('is-scrolled')};updateHeader();window.addEventListener('scroll',updateHeader,{passive:true});</script>
 </body>
 </html>
