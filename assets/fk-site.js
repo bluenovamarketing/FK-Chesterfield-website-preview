@@ -110,7 +110,7 @@ function aboutPageV3(){return aboutPageV2()
 function aboutPageV4(){return aboutPageV3()
   .replace('Serving Southeast Michigan since 2011','Serving Southeast Michigan since 2009')
   .replace('<b>Serving since 2011</b>','<b>Serving since 2009</b>')
-  .replace('<img src="assets/images/dsc09358.webp" alt="Frost and Kretsch Plumbing technician in front of branded service vehicles">','<div class="owner-team-photo"><img src="assets/images/dsc09538.webp" alt="Dave Kretsch and a Frost and Kretsch Plumbing technician standing in front of company service vans"></div>')
+  .replace('<img src="assets/images/dsc09358.webp" alt="Frost and Kretsch Plumbing technician in front of branded service vehicles">','<div class="owner-team-photo"><img src="assets/images/dave-and-wife-team-crop-v1.png" alt="Dave Kretsch and his wife standing together in front of Frost and Kretsch Plumbing service vans"></div>')
   .replace('Frost &amp; Kretsch Plumbing began serving Southeast Michigan in 2011. Today, owner Dave Kretsch leads the company from Chesterfield, where the team supports homeowners, businesses, facilities, and managed properties across Macomb, Oakland, and Wayne counties.','Frost &amp; Kretsch Plumbing began serving Southeast Michigan in 2009 and incorporated in Michigan in 2011. Today, owner Dave Kretsch leads the company from Chesterfield, where the team supports homeowners, businesses, facilities, and managed properties across Macomb, Oakland, and Wayne counties.')
   .replace('<div class="service-icon">2011</div><h3>Established local business</h3><p>Business records document Frost &amp; Kretsch Plumbing serving Southeast Michigan since November 2011, with the company now based in Chesterfield.</p>','<div class="service-icon">2009</div><h3>Established local business</h3><p>A federal trademark filing documents first use of the Frost &amp; Kretsch Plumbing name in March 2009. The current Michigan corporation was formed in November 2011.</p>')
   .replace('<p><strong>Established:</strong> 2011</p>','<p><strong>Serving since:</strong> 2009</p><p><strong>Incorporated:</strong> 2011</p>')
@@ -122,7 +122,7 @@ function renderReviewHubV2(){
   const cards=[...document.querySelectorAll('#review-grid .review-card')];
   const update=(slug,description,version)=>{const card=cards.find(item=>item.getAttribute('href')===pageUrl(slug));if(!card)return;card.querySelector('p').textContent=description;card.querySelector('.version-badge').textContent=`${version} • Ready for review`;};
   update('home','Restored full team-and-fleet hero with verified company proof and the approved Macomb visual system.','v1.4');
-  update('about','Restored the authentic full-length photo of Dave Kretsch and a technician in front of the company service vans.','v1.6');
+  update('about','Added the approved full-length portrait of Dave Kretsch and his wife together in front of the company service vans.','v1.7');
 }
 function initNavigation(){
   const menu=document.querySelector('.menu-btn');
