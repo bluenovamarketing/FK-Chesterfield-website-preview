@@ -35,7 +35,7 @@ const pageMeta={
   'water-heater':['Water Heater Repair & Installation | Frost & Kretsch Plumbing','Tank and tankless water-heater repair, replacement, and installation across Macomb, Oakland, and Wayne counties.'],
   'service-areas':['Plumbing Service Area | Frost & Kretsch Plumbing','Frost & Kretsch Plumbing serves priority communities across Macomb, Oakland, and Wayne counties from Chesterfield, Michigan.'],
   chesterfield:['Plumber in Chesterfield, MI | Frost & Kretsch Plumbing','Call Frost & Kretsch Plumbing for residential, commercial, drain, sewer, water-heater, and 24/7 emergency plumbing service in Chesterfield, Michigan.'],
-  about:['About Frost & Kretsch Plumbing | Chesterfield, MI','Serving Southeast Michigan since 2011, Frost & Kretsch Plumbing is a licensed and insured Chesterfield plumbing company for homes and businesses.'],
+  about:['About Frost & Kretsch Plumbing | Chesterfield, MI','Serving Southeast Michigan since 2009, Frost & Kretsch Plumbing is a licensed and insured Chesterfield plumbing company for homes and businesses.'],
   contact:['Contact Frost & Kretsch Plumbing','Call Frost & Kretsch Plumbing at (586) 675-0097 or request plumbing service from the Chesterfield team.']
 };
 
@@ -107,13 +107,22 @@ function aboutPageV3(){return aboutPageV2()
   .replace("images/team-office-staff-wide-v5.jpg');--hero-position:center 66%","images/team-full-plus-two-polos-v5.jpg');--hero-position:center 66%")
   .replace('assets/images/team-crew-van-close-v16.jpg" alt="Frost and Kretsch Plumbing crew in front of branded service vehicles"','assets/images/dsc09358.webp" alt="Frost and Kretsch Plumbing technician in front of branded service vehicles"');}
 
-const renderers={home:homePageV2,architecture:architecturePage,services:servicesPage,residential:residentialPage,commercial:commercialPage,'water-heater':waterHeaterPage,'service-areas':serviceAreasPage,chesterfield:chesterfieldPage,about:aboutPageV3,contact:contactPage};
+function aboutPageV4(){return aboutPageV3()
+  .replace('Serving Southeast Michigan since 2011','Serving Southeast Michigan since 2009')
+  .replace('<b>Serving since 2011</b>','<b>Serving since 2009</b>')
+  .replace('<img src="assets/images/dsc09358.webp" alt="Frost and Kretsch Plumbing technician in front of branded service vehicles">','<div class="portrait-crop portrait-crop--dave"><img src="assets/images/team-office-staff-wide-v5.jpg" alt="Dave Kretsch, owner of Frost and Kretsch Plumbing, wearing the company white polo"></div>')
+  .replace('Frost &amp; Kretsch Plumbing began serving Southeast Michigan in 2011. Today, owner Dave Kretsch leads the company from Chesterfield, where the team supports homeowners, businesses, facilities, and managed properties across Macomb, Oakland, and Wayne counties.','Frost &amp; Kretsch Plumbing began serving Southeast Michigan in 2009 and incorporated in Michigan in 2011. Today, owner Dave Kretsch leads the company from Chesterfield, where the team supports homeowners, businesses, facilities, and managed properties across Macomb, Oakland, and Wayne counties.')
+  .replace('<div class="service-icon">2011</div><h3>Established local business</h3><p>Business records document Frost &amp; Kretsch Plumbing serving Southeast Michigan since November 2011, with the company now based in Chesterfield.</p>','<div class="service-icon">2009</div><h3>Established local business</h3><p>A federal trademark filing documents first use of the Frost &amp; Kretsch Plumbing name in March 2009. The current Michigan corporation was formed in November 2011.</p>')
+  .replace('<p><strong>Established:</strong> 2011</p>','<p><strong>Serving since:</strong> 2009</p><p><strong>Incorporated:</strong> 2011</p>')
+  .replace('Business records document Frost &amp; Kretsch Plumbing serving Southeast Michigan since November 2011.','The Frost &amp; Kretsch Plumbing name has been in use since March 2009, and the current Michigan corporation was formed in November 2011.');}
+
+const renderers={home:homePageV2,architecture:architecturePage,services:servicesPage,residential:residentialPage,commercial:commercialPage,'water-heater':waterHeaterPage,'service-areas':serviceAreasPage,chesterfield:chesterfieldPage,about:aboutPageV4,contact:contactPage};
 function renderReviewHubV2(){
   renderReviewHub();
   const cards=[...document.querySelectorAll('#review-grid .review-card')];
   const update=(slug,description,version)=>{const card=cards.find(item=>item.getAttribute('href')===pageUrl(slug));if(!card)return;card.querySelector('p').textContent=description;card.querySelector('.version-badge').textContent=`${version} • Ready for review`;};
   update('home','Restored full team-and-fleet hero with verified company proof and the approved Macomb visual system.','v1.4');
-  update('about','Expanded company history, ownership, licensing, insurance, BBB credibility, training, capabilities, and internal service links.','v1.4');
+  update('about','Added Dave Kretsch photography and clarified the company name has been in use since 2009, before the 2011 incorporation.','v1.5');
 }
 function initNavigation(){
   const menu=document.querySelector('.menu-btn');
