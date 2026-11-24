@@ -12,3 +12,49 @@
 .county-card p:last-child{margin-bottom:0}
 .template-note{border-left:5px solid var(--cyan);background:#f1f8ff;padding:18px 20px;margin:24px 0}
 @media(max-width:850px){.architecture-grid,.county-grid{grid-template-columns:1fr}}
+
+/* Final approved Macomb navigation pattern, adapted to the FK service architecture. */
+.screen-reader-text{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.nav-item{position:relative;display:flex;align-items:center}
+.submenu-toggle{display:grid;place-items:center;width:26px;height:32px;margin-left:0;border:0;background:transparent;color:var(--navy);cursor:pointer;font-size:.85rem}
+.submenu-toggle:hover,.submenu-toggle:focus-visible{color:var(--red)}
+.nav-submenu{display:none;position:absolute;z-index:60;top:100%;left:-18px;width:330px;max-height:min(70vh,620px);overflow:auto;padding:12px;border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 20px 44px rgba(23,25,78,.18)}
+.nav-submenu a{display:block;padding:10px 12px;border-radius:9px;font-size:.84rem;line-height:1.2}
+.nav-submenu a:hover,.nav-submenu a:focus{background:var(--surface-2)}
+.nav-submenu--commercial{left:auto;right:-18px}
+.review-summary{display:grid;gap:3px;min-width:220px;padding:18px 22px;border-radius:16px;background:var(--navy);color:#fff}
+.review-summary strong{font-family:var(--display);font-size:2.6rem;line-height:1}
+.review-summary span{font-weight:800}
+.review-summary small{color:#cbd2e5}
+.review-placeholder{min-height:275px;display:grid;place-items:center;padding:30px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 14px 34px rgba(23,25,78,.06);text-align:center;color:var(--muted)}
+.review-placeholder p{max-width:720px;margin:0}
+.consent-field{display:grid!important;grid-template-columns:auto 1fr;align-items:start;gap:10px;font-size:.88rem;font-weight:500!important}
+.consent-field input{width:18px!important;height:18px;margin-top:2px}
+
+@media(min-width:981px){
+  .nav-item:hover>.nav-submenu,.nav-item:focus-within>.nav-submenu,.nav-item.submenu-open>.nav-submenu{display:grid}
+}
+
+@media(min-width:981px) and (max-width:1220px){
+  .nav{gap:12px}
+  .brand img{width:235px}
+  .nav-links{gap:9px}
+  .nav-links a{font-size:.88rem}
+  .submenu-toggle{width:20px}
+  .nav-phone{padding-inline:13px;font-size:.82rem}
+}
+
+@media(max-width:980px){
+  .nav-item{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--surface-2)}
+  .nav-item>a{padding:10px 4px}
+  .submenu-toggle{width:42px;height:42px;margin:0}
+  .nav-item.submenu-open>.submenu-toggle{transform:rotate(180deg)}
+  .nav-submenu{position:static;grid-column:1/-1;width:auto;max-height:none;overflow:visible;padding:4px 0 10px 14px;border:0;border-left:3px solid var(--red);border-radius:0;background:transparent;box-shadow:none}
+  .nav-item.submenu-open>.nav-submenu{display:grid}
+  .nav-submenu a{padding:8px 10px;border:0;font-size:.84rem}
+  .review-summary{min-width:0}
+}
+
+@media(max-width:650px){
+  .review-placeholder{min-height:320px}
+}
