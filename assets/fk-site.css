@@ -1,0 +1,14 @@
+.review-shell .review-head p{max-width:900px}
+.review-card .new-tab-note{display:block;margin-top:12px;color:#5f6678;font-size:.82rem}
+.architecture-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.architecture-card{border:1px solid #d9deed;border-radius:18px;background:#fff;padding:26px;box-shadow:0 14px 34px rgba(23,25,78,.06)}
+.architecture-card h2{margin-top:0;color:var(--navy)}
+.architecture-card ul{margin:0;padding-left:20px}
+.architecture-card li+li{margin-top:8px}
+.url-list{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.88rem;overflow-wrap:anywhere}
+.county-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.county-card{border:1px solid #d9deed;border-radius:16px;background:#fff;padding:24px}
+.county-card h3{margin-top:0;color:var(--navy)}
+.county-card p:last-child{margin-bottom:0}
+.template-note{border-left:5px solid var(--cyan);background:#f1f8ff;padding:18px 20px;margin:24px 0}
+@media(max-width:850px){.architecture-grid,.county-grid{grid-template-columns:1fr}}

@@ -1,0 +1,61 @@
+/* v1.4 client-review refinements */
+
+.hero::before{background-position:var(--hero-position,center)}
+
+.section-head{
+  display:block;
+  max-width:920px;
+  margin-bottom:34px;
+}
+.section-head .section-title{max-width:900px}
+.section-head .lead{max-width:800px;margin-top:12px}
+
+.offering-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+.offering-grid .card:nth-child(4):last-child{grid-column:auto}
+.offering-grid .card-body{padding:21px}
+.offering-grid .card h3{font-size:1.42rem;line-height:1.02}
+
+.city-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+.phone-cta,
+.phone-cta:visited,
+.phone-cta:hover,
+.phone-cta:focus{
+  min-width:220px;
+  color:#fff!important;
+  justify-content:center;
+  text-align:center;
+  line-height:1.15;
+}
+.sidebar-card a.btn,
+.sidebar-card a.btn:visited,
+.sidebar-card a.btn:hover,
+.sidebar-card a.btn:focus{
+  display:flex;
+  width:100%;
+  min-width:0;
+  align-items:center;
+  justify-content:center;
+  padding:13px 16px;
+  color:#fff!important;
+  background:var(--red);
+  font-size:1.05rem;
+  line-height:1.15;
+  text-align:center;
+}
+.sidebar-card a.btn:hover,
+.sidebar-card a.btn:focus{background:#df173f}
+
+@media(max-width:1100px) and (min-width:651px){
+  .offering-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:650px){
+  .section-head{margin-bottom:28px}
+  .section-head .section-title{font-size:clamp(2.55rem,13vw,3.6rem)}
+  .offering-grid,.city-grid{grid-template-columns:1fr}
+  .hero::before{background-position:var(--hero-position,center)}
+}

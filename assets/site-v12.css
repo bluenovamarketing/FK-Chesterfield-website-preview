@@ -1,0 +1,78 @@
+.topbar .wrap{align-items:center}
+.topbar a,.topbar a:hover,.topbar a:focus,.topbar a:visited{color:#fff;text-decoration:none}
+.topbar-phone,.phone-cta,.footer-phone{white-space:nowrap}
+.btn-primary,.btn-primary:visited{background:var(--red);color:#fff}
+.btn-primary:hover,.btn-primary:focus{background:#df173f;color:#fff}
+.btn-secondary,.btn-secondary:visited{background:#fff;color:var(--navy);border-color:#fff}
+.btn-secondary:hover,.btn-secondary:focus{background:#f3f5fb;color:var(--navy)}
+.btn-outline,.btn-outline:visited{color:var(--navy)}
+.topbar a::selection,.btn::selection,.footer-phone::selection{background:#fff;color:var(--navy)}
+.center-action{text-align:center;margin-top:30px}
+
+@media(min-width:981px){
+  .offering-grid .card:nth-child(4):last-child{grid-column:2}
+}
+
+.map-card::before{
+  background-image:linear-gradient(33deg,transparent 46%,rgba(23,25,78,.09) 47% 49%,transparent 50%),linear-gradient(-26deg,transparent 43%,rgba(23,25,78,.08) 44% 46%,transparent 47%),radial-gradient(circle at 20% 40%,rgba(46,214,255,.5) 0 3px,transparent 4px),radial-gradient(circle at 70% 62%,rgba(248,30,75,.55) 0 6px,transparent 7px);
+  background-size:180px 130px,210px 150px,64px 64px,110px 110px;
+  opacity:.7
+}
+.map-card div{padding:22px 26px;background:rgba(255,255,255,.94)}
+.map-link{text-decoration:none}
+.map-link:hover div,.map-link:focus div{transform:translateY(-2px);box-shadow:0 20px 40px rgba(23,25,78,.2)}
+.map-pin{display:grid;place-items:center;width:46px;height:46px;margin:0 auto 12px;border-radius:50%;background:var(--red);color:#fff;box-shadow:0 0 0 9px rgba(248,30,75,.13)}
+
+.site-footer{padding:46px 0 20px}
+.footer-main{display:grid;grid-template-columns:minmax(0,1.5fr) .7fr .7fr;gap:48px;align-items:start}
+.footer-brand{max-width:520px}
+.footer-logo-panel{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:14px;background:#fff}
+.footer-brand .footer-logo-panel img{width:265px;max-height:66px;object-fit:contain;filter:none}
+.footer-brand p{margin:16px 0 10px}
+.footer-phone{display:inline-block;color:#fff;font-family:var(--display);font-size:1.65rem;font-weight:800;text-decoration:none}
+.footer-phone:hover,.footer-phone:focus{color:var(--cyan)}
+.footer-col h3{margin-bottom:10px}
+.footer-legal{display:flex;align-items:center;flex-wrap:wrap;gap:12px 22px;margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:.82rem;color:#98a1b8}
+.footer-legal a{color:#c6ccdd}
+.footer-legal a:hover,.footer-legal a:focus{color:var(--cyan)}
+.footer-policy-links{display:flex;gap:16px}
+
+.simple-hero{padding:92px 0 76px;background:linear-gradient(125deg,var(--navy-2),var(--navy));color:#fff}
+.simple-hero h1{font-size:clamp(3.6rem,7vw,6.2rem)}
+.simple-hero p{max-width:720px;margin:0;color:#e3e7f4;font-size:1.2rem}
+.sitemap-grid{display:grid;grid-template-columns:.8fr 1.4fr .8fr;gap:42px}
+.sitemap-grid h2{font-size:2.1rem}
+.sitemap-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.sitemap-list a{color:var(--navy);font-weight:800;text-decoration:none}
+.sitemap-list a:hover,.sitemap-list a:focus{color:var(--red)}
+.sitemap-services li{padding-bottom:12px;border-bottom:1px solid var(--line)}
+.sitemap-services span{display:block;color:var(--muted);font-size:.92rem}
+.legal-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:64px}
+.legal-layout .article-copy{margin:0}
+.legal-notice{padding:20px 22px;border:1px solid #f2c768;border-left:6px solid #e6a817;border-radius:0 14px 14px 0;background:#fff9e8;color:#66470a}
+
+@media(max-width:980px){
+  .legal-layout{grid-template-columns:1fr}
+  .footer-main{grid-template-columns:1.2fr .8fr .8fr;gap:32px}
+  .sitemap-grid{grid-template-columns:1fr 1fr}
+  .sitemap-grid section:nth-child(2){grid-row:span 2}
+}
+
+@media(max-width:650px){
+  .topbar{font-size:.72rem}
+  .topbar .wrap{justify-content:space-between;gap:8px;padding:7px 0}
+  .topbar span{display:block;line-height:1.2}
+  .nav{gap:10px}
+  .nav-phone{display:none}
+  .brand img{width:195px}
+  .hero-actions .btn{width:100%}
+  .footer-main{grid-template-columns:1fr 1fr;gap:24px 18px}
+  .footer-brand{grid-column:1/-1;max-width:none}
+  .footer-logo-panel{padding:8px 10px}
+  .footer-brand .footer-logo-panel img{width:235px}
+  .footer-legal{display:grid;gap:10px;margin-top:26px}
+  .footer-policy-links{flex-wrap:wrap}
+  .sitemap-grid{grid-template-columns:1fr}
+  .sitemap-grid section:nth-child(2){grid-row:auto}
+  .simple-hero{padding:68px 0 58px}
+}
